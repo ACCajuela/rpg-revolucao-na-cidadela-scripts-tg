@@ -9,13 +9,11 @@ Trabalho de Graduação • Fatec Campinas
 </p>
 
 <p align="center">
-
-![Godot](https://img.shields.io/badge/Godot-4.x-478CBF?logo=godot-engine&logoColor=white)
-![GDScript](https://img.shields.io/badge/GDScript-111827?logo=godot-engine)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?logo=sqlite)
-![Dialogic](https://img.shields.io/badge/Dialogic-Plugin-blue)
-![License](https://img.shields.io/badge/Academic_Project-2026-green)
-
+  <img src="https://img.shields.io/badge/Godot-4.x-478CBF?logo=godot-engine&logoColor=white" alt="Godot">
+  <img src="https://img.shields.io/badge/GDScript-111827?logo=godot-engine" alt="GDScript">
+  <img src="https://img.shields.io/badge/SQLite-003B57?logo=sqlite" alt="SQLite">
+  <img src="https://img.shields.io/badge/Dialogic-Plugin-blue" alt="Dialogic">
+  <img src="https://img.shields.io/badge/Academic_Project-2026-green" alt="Academic Project">
 </p>
 
 **Revolução na Cidadela** é um Trabalho de Graduação desenvolvido no curso de **Análise e Desenvolvimento de Sistemas da Faculdade de Tecnologia de Campinas (Fatec Campinas)**.
