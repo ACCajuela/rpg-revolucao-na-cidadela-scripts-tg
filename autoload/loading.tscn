@@ -1,0 +1,169 @@
+[gd_scene format=3 uid="uid://bp1ap7a62fqww"]
+
+[ext_resource type="Script" uid="uid://bnh6k8yhqd14r" path="res://autoload/loading.gd" id="1_yc7uc"]
+[ext_resource type="FontFile" uid="uid://c0308qbm80wfo" path="res://front/fonts/Jersey_25/Jersey25-Regular.ttf" id="2_2s68h"]
+[ext_resource type="Theme" uid="uid://ctyy8pgfnaio5" path="res://front/themes/fonttheme.tres" id="3_ff5eu"]
+[ext_resource type="FontFile" uid="uid://cxvw68ysg8g3h" path="res://front/fonts/Jersey_15/Jersey15-Regular.ttf" id="3_x7vks"]
+
+[sub_resource type="Animation" id="Animation_yc7uc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dot1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(162, 247)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Dot2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(178, 247)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Dot3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(193, 247)]
+}
+
+[sub_resource type="Animation" id="Animation_ir5ef"]
+resource_name = "UpDown"
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Dot1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(162, 247), Vector2(162, 228), Vector2(162, 247)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Dot2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(178, 247), Vector2(178, 247), Vector2(178, 228)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Dot3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.4, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(193, 247), Vector2(193, 247), Vector2(193, 228)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dhqfv"]
+_data = {
+&"RESET": SubResource("Animation_yc7uc"),
+&"UpDown": SubResource("Animation_ir5ef")
+}
+
+[node name="Loading" type="CanvasLayer" unique_id=269011053]
+process_mode = 3
+layer = 1000
+script = ExtResource("1_yc7uc")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=582536850]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Loading" type="Label" parent="." unique_id=1789024868]
+offset_left = 43.0
+offset_top = 265.0
+offset_right = 154.0
+offset_bottom = 302.0
+theme = ExtResource("3_ff5eu")
+theme_override_fonts/font = ExtResource("2_2s68h")
+text = "Carregando"
+
+[node name="TipsText" type="Label" parent="." unique_id=576175615]
+clip_contents = true
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -532.5
+offset_top = -185.0
+offset_right = 532.5
+offset_bottom = -23.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("3_ff5eu")
+theme_override_fonts/font = ExtResource("3_x7vks")
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices molestie velit, aliquam auctor orci porta placerat. Vestibulum ullamcorper interdum urna et accumsan. In eleifend pulvinar sagittis. Sed arcu nulla, posuere id elementum a, pulvinar in libero. Aenean lacinia vehicula varius. "
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Dot1" type="Label" parent="." unique_id=1628561999]
+offset_left = 162.0
+offset_top = 247.0
+offset_right = 174.0
+offset_bottom = 307.0
+theme = ExtResource("3_ff5eu")
+theme_override_fonts/font = ExtResource("2_2s68h")
+text = "."
+vertical_alignment = 1
+
+[node name="Dot2" type="Label" parent="." unique_id=1705101712]
+offset_left = 178.0
+offset_top = 247.0
+offset_right = 190.0
+offset_bottom = 307.00043
+theme = ExtResource("3_ff5eu")
+theme_override_fonts/font = ExtResource("2_2s68h")
+text = "."
+vertical_alignment = 1
+
+[node name="Dot3" type="Label" parent="." unique_id=2095947627]
+offset_left = 193.0
+offset_top = 247.0
+offset_right = 205.0
+offset_bottom = 307.00092
+theme = ExtResource("3_ff5eu")
+theme_override_fonts/font = ExtResource("2_2s68h")
+text = "."
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=145802476]
+libraries/ = SubResource("AnimationLibrary_dhqfv")
+
+[node name="Timer" type="Timer" parent="." unique_id=1617639889]

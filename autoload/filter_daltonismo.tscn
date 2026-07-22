@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://dpydpqhakmohn"]
+
+[ext_resource type="Shader" uid="uid://crvcdi1omla7c" path="res://front/textures/daltonismo.gdshader" id="1_0fqwq"]
+
+[sub_resource type="GDScript" id="GDScript_0fqwq"]
+script/source = "extends CanvasLayer
+
+@onready var color_rect = $ColorRect
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# No script que está no nó FilterDaltonismo
+func set_intensity(value: float) -> void:
+	var mat = color_rect.material as ShaderMaterial
+	if mat:
+		mat.set_shader_parameter(\"intensity\", value)
+
+func aplicar_por_nome(nome_modo: String, intensidade: float):
+	var modos = [\"Nenhum\", \"Protanopia\", \"Deuteranopia\", \"Tritanopia\"]
+	var index = modos.find(nome_modo)
+	if index == -1: index = 0
+	
+	var rect = get_node(\"ColorRect\")
+	var mat = rect.material as ShaderMaterial
+	if mat:
+		mat.set_shader_parameter(\"type\", index)
+		mat.set_shader_parameter(\"intensity\", intensidade) # Se seu shader tiver essa variável
+	
+	rect.visible = (index != 0)
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j7llt"]
+shader = ExtResource("1_0fqwq")
+shader_parameter/type = 0
+shader_parameter/intensity = 1.0
+
+[node name="FilterDaltonismo" type="CanvasLayer" unique_id=1882025700]
+script = SubResource("GDScript_0fqwq")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=483139740]
+z_index = 128
+material = SubResource("ShaderMaterial_j7llt")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

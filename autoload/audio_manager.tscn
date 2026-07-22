@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://oiynrvcvqqvq"]
+
+[ext_resource type="Script" uid="uid://lk2g5xne01o1" path="res://autoload/audio_manager.gd" id="1_327uc"]
+[ext_resource type="AudioStream" path="res://front/sounds/sfx/BotaoMenu.mp3" id="2_uyp2h"]
+[ext_resource type="AudioStream" path="res://front/sounds/trilha-sonora/MusicaPrincipal.mp3" id="3_iaokm"]
+[ext_resource type="AudioStream" uid="uid://cf3ji66484att" path="res://front/sounds/trilha_sonora/final_boss_battle__rod_kim.mp3" id="4_kshm2"]
+[ext_resource type="AudioStream" uid="uid://ds0285q52vom5" path="res://front/sounds/sfx/footsteps_hollow_wood.mp3" id="5_p8va6"]
+
+
+[node name="AudioManager" type="Node"]
+script = ExtResource("1_327uc")
+
+[node name="SFX_botao" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_uyp2h")
+bus = &"SFX"
+
+[node name="Musica_principal" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_iaokm")
+bus = &"Music"
+
+[node name="Musica_combate" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_kshm2")
+bus = &"Music"
+
+[node name="SFX_passos" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_p8va6")
+bus = &"SFX"
