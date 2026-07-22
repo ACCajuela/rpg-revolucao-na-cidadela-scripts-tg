@@ -24,6 +24,63 @@ O objetivo deste repositório **não é disponibilizar uma versão jogável do p
 
 ---
 
+<div align="center">
+
+<table>
+  <tr>
+    <th>Informação</th>
+    <th>Descrição</th>
+  </tr>
+  <tr>
+    <td>🎓 Instituição</td>
+    <td>Faculdade de Tecnologia de Campinas (Fatec Campinas)</td>
+  </tr>
+  <tr>
+    <td>📚 Curso</td>
+    <td>Análise e Desenvolvimento de Sistemas</td>
+  </tr>
+  <tr>
+    <td>📄 Natureza</td>
+    <td>Trabalho de Graduação</td>
+  </tr>
+  <tr>
+    <td>👥 Desenvolvimento</td>
+    <td>Aline Sakagushi, Ana Carolina Cajuela, Karen Yuzawa e Rillory Teodora</td>
+  </tr>
+  <tr>
+    <td>🎮 Engine</td>
+    <td>Godot 4</td>
+  </tr>
+  <tr>
+    <td>💻 Linguagem</td>
+    <td>GDScript</td>
+  </tr>
+  <tr>
+    <td>🗄️ Banco de Dados</td>
+    <td>SQLite</td>
+  </tr>
+  <tr>
+    <td>💬 Plugin</td>
+    <td>Dialogic</td>
+  </tr>
+  <tr>
+    <td>🧪 Testes</td>
+    <td>GdUnit4</td>
+  </tr>
+  <tr>
+    <td>📋 Metodologia</td>
+    <td>Scrumban</td>
+  </tr>
+  <tr>
+    <td>📅 Ano</td>
+    <td>2026</td>
+  </tr>
+</table>
+
+</div>
+
+---
+
 ## Sobre o projeto
 
 **Revolução na Cidadela** é um RPG digital em 2D desenvolvido na Godot Engine cuja proposta foi integrar diferentes áreas da Engenharia de Software, como desenvolvimento de jogos, persistência de dados, arquitetura de software, testes automatizados e gerenciamento de projetos.
